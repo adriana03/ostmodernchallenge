@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<mydata>
+  <episode>
+    <id>1</id>
+    <title>Game of Thrones:  Winter is coming </title>
+    <episode_number>1</episode_number>
+    <created_at>2016-11-06 14:54:00+00:00</created_at>
+    <hero_image>media/images/winter-is-coming-1024.jpg</hero_image>
+  </episode>
+  <episode>
+    <id>2</id>
+    <title>Game of Thrones: The Kingsroad</title>
+    <episode_number>2</episode_number>
+    <created_at>2016-11-06 14:54:35+00:00</created_at>
+    <hero_image>media/images/1-D3TF20wLucky3kFaRLPi_w.jpeg</hero_image>
+  </episode>
+  <episode>
+    <id>3</id>
+    <title>Game of Thrones: Lord Snow</title>
+    <episode_number>3</episode_number>
+    <created_at>2016-11-06 14:55:08+00:00</created_at>
+    <hero_image>media/images/game_of_thrones_s01e01_still.jpg</hero_image>
+  </episode>
+</mydata>

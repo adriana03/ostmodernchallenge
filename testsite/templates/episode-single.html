@@ -1,0 +1,73 @@
+{%include 'header.html' %}
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+        <h1>Episode {{episode.episode_number}}</h1>
+        <p>{{episode.title}}</p>
+        </div>
+        <div class="col-md-12">
+            <div class="thumbnail">
+              
+                <img class="img-responsive" src="/media/{{episode.hero_image}}" alt="">
+            </div>
+            <div class="caption-full">
+                <h3>Reactions for this episode:</h3>
+                <div class="col-md-6" style="margin-bottom:10%">
+                    <h4 >Image Reactions:</h4>
+                    {%if image_reactions%}
+                    {%for ri in image_reactions%}
+                    {%endfor%}
+                    {%include 'image_reactions.html' %}
+                    {%else%}
+                    <p>Be the first one to react to thise episode with an image!</p>
+                    {%endif%}
+                    <form action="{% url 'add_imagereaction' episode.pk %}" method="POST" enctype="multipart/form-data">  {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">Your name:</label>
+                            <input type="name" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Your image:</label>
+                            <div style="position:relative;">
+                            <a class='btn btn-primary' href='javascript:;'>
+                                Choose File...
+                                <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="image" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
+                            
+                            </a>
+                            &nbsp;
+                            <span class='label label-info' id="upload-file-info"></span>
+                    </div>
+                        </div>
+                        <input class="btn btn-success"  type="submit" value="Add an image reaction">
+                        
+                    </form>
+                </div>
+                <div class="col-md-6" style="margin-bottom:10%">
+                    <h4>Tweet Reactions:</h4>
+                    {%if tweet_reactions%}
+                    {%include 'tweet_reactions.html' %}
+                    {%for tr in tweet_reactions%}
+                    {%endfor%}
+                    {%else%}
+                    <p>Be the first one to react to thise episode with a tweet!</p>
+                    {%endif%}  
+                    <form action="{% url 'add_tweetreaction' episode.pk %}" method="POST"> 
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name">Your name:</label>
+                            <input type="name" class="form-control" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="tweet">Your tweet:</label>
+                            <textarea name="tweet" style="width:100%;height:100px; border-color:gainsboro;" required></textarea>
+                        </div>
+                        <input class="btn btn-success" type="submit" value="Add a tweet reaction">
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

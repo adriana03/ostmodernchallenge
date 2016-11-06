@@ -1,0 +1,19 @@
+{%include 'header.html' %}
+
+<div style="bottom: 25%;left: 25%;width: 100%;padding: 16px;overflow: auto;word-break:break-word;">
+{%for ir in image_reactions%}
+	{%if ir.allowed_reaction %}
+	<div>
+		<div> <strong>{{ir.username}}</strong> said :</div>
+		<img class="img-responsive" src="/media/{{ir.image}}">
+		<span style="font-size:10px" >{{ir.created_at|date:"d / m / Y"}}</span> 
+		</div>
+		<br>
+		{%endif%}
+		{%endfor%}
+</div>
+
+
+
+
+

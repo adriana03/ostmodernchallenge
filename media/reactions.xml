@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<mydata>
+  <imagereaction>
+    <username>Pauline</username>
+    <episode>3</episode>
+    <allowed_reaction>True</allowed_reaction>
+    <image>media/images/game-of-thrones-the-wolf-and-the-lion-460x258.jpg</image>
+  </imagereaction>
+  <imagereaction>
+    <username>Marina</username>
+    <episode>1</episode>
+    <allowed_reaction>False</allowed_reaction>
+    <image>media/images/game-of-thrones-episode-1_PS3xP5Q.jpg</image>
+  </imagereaction>
+  <imagereaction>
+    <username>Laura</username>
+    <episode>1</episode>
+    <allowed_reaction>True</allowed_reaction>
+    <image>media/images/1-fire-and-blood_ugWzWfe.png</image>
+  </imagereaction>
+  <tweetreaction>
+    <username>Lucy</username>
+    <episode>1</episode>
+    <allowed_reaction>True</allowed_reaction>
+    <text>Arya is the best!!</text>
+  </tweetreaction>
+  <tweetreaction>
+    <username>James</username>
+    <episode>1</episode>
+    <allowed_reaction>True</allowed_reaction>
+    <text>In love with Khalessi!</text>
+  </tweetreaction>
+  <tweetreaction>
+    <username>Louis</username>
+    <episode>1</episode>
+    <allowed_reaction>True</allowed_reaction>
+    <text>Ed Stark is the best!</text>
+  </tweetreaction>
+  <tweetreaction>
+    <username>Martha</username>
+    <episode>1</episode>
+    <allowed_reaction>True</allowed_reaction>
+    <text>This episode is awsome!</text>
+  </tweetreaction>
+  <tweetreaction>
+    <username>Laura</username>
+    <episode>1</episode>
+    <allowed_reaction>False</allowed_reaction>
+    <text>I hate Cersei</text>
+  </tweetreaction>
+</mydata>

@@ -1,0 +1,19 @@
+{%include 'header.html' %}
+
+<div style="bottom: 25%;left: 25%;width: 100%;padding: 16px;overflow: auto;word-break:break-word;">
+{%for tr in tweet_reactions%}
+	{%if tr.allowed_reaction %}
+	<div>
+		<div> <strong>{{tr.username}}</strong> said :</div>
+		<div><p>  {{tr.text}}</p></div>
+		<span style="font-size:10px" >{{tr.created_at|date:"d / m / Y"}}</span> 
+		</div>
+		<br>
+		{%endif%}
+		{%endfor%}
+</div>
+
+
+
+
+
